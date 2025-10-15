@@ -32,7 +32,7 @@ def kelas():
     kelas=cursor.fetchall()
     cursor.close()
 
-    return render_template('kelass/index.html', data=kelas)
+    return render_template('kelas/index.html', data=kelas)
 
 if __name__=='__main__':
     app.run(debug=True)
