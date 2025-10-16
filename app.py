@@ -34,5 +34,16 @@ def kelas():
 
     return render_template('kelas/index.html', data=kelas)
 
+@app.route('/tambah_kelas',methods=['GET','POST'])
+def tambah_kelas():
+    if request.method=='POST':
+        kode_kelas=request.form['kode_kelas']
+        cursor=mysql.connection.cursor()
+        cursor.execute('INSERT INTO kelas (kode_kelas) VALUES (%s)',[kode_kelas])
+        mysql.connection.commit()
+        cursor.close()
+        return redirect(url_for('kelas'))
+    return render_template('/kelas/create.html')
+
 if __name__=='__main__':
     app.run(debug=True)
