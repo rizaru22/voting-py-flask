@@ -31,18 +31,18 @@
           <a class="nav-link" aria-current="page" href="">Pemilihan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Kandidat</a>
+          <a href="{{url_for('kandidat')}}" class="nav-link" href="">Kandidat</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Pemilih</a>
+          <a class="nav-link" href="{{url_for('voters')}}">Pemilih</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Kelas</a>
+          <a class="nav-link" href="{{url_for('kelas')}}">Kelas</a>
         </li>
         <li class="nav-item d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
           <a
             class="btn btn-outline-light rounded-pill w-100 d-lg-inline"
-            href=""
+            href="{{url_for('logout')}}"
           >
             Logout
           </a>
